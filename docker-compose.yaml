@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   git:
-    image: claudio4/git-http-backend:latest
+    image: ghcr.io/claudio4/git-http-backend-container:master
     restart: unless-stopped
     user: '1001:1001' # change this ass needed.
     volumes:
