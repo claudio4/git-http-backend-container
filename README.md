@@ -15,7 +15,7 @@ You also need to create a file with your user credentials. You can read more [he
 
 Now you can launch the container, either by using the included [docker-compose file](/docker-compose.yaml) or by executing:
 ```bash
-docker run -d -p 80:80 -v "/path/to/host/gitdir:/git" -v "/path/to/your/auth/file:/etc/nginx/htpasswd:ro" --user 1000:1000 claudio4/git-http-backend
+docker run -d -p 80:80 -v "/path/to/host/gitdir:/git" -v "/path/to/your/auth/file:/etc/nginx/htpasswd:ro" --user 1000:1000 ghcr.io/claudio4/git-http-backend-container:master
 ```
 
 You can see that the command above includes the `--user` parameter. It is recommended that you change the `uid` and `gid` for the ones that you use to create your git repositories folder. I really **discourage** the use of the root user for this matter.
