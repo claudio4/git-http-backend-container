@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  git:
+    image: claudio4/git-http-backend:latest
+    restart: unless-stopped
+    user: '1001:1001' # change this ass needed.
+    volumes:
+      - "/path/to/host/gitdir:/git"
+      - "/path/to/your/auth/file:/etc/nginx/htpasswd:ro" # this mount is reads-only.
